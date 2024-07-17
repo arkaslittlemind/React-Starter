@@ -1,14 +1,13 @@
 import "./App.css";
-import Arka from "./arka";
-
+import Arka from "./Arka";
 
 function App() {
-  return(
+  return (
     <>
       <Arka />
-      <h1>Hello world!</h1>  
+      <h1>Hello world!</h1>
     </>
-  )
+  );
 }
 
 export default App;
