@@ -5,6 +5,8 @@ const PasswordGenerator = () => {
   const [numberAllowed, setNumberAllowed] = useState(false);
   const [characterAllowed, setCharacterAllowed] = useState(false);
   const [password, setPassword] = useState("");
+  const [isCopied, setIsCopied] = useState(false);
+  
 
   //useRef Hook
   const passwordRef = useRef(null);
@@ -32,6 +34,8 @@ const PasswordGenerator = () => {
     passwordRef.current?.select();
     passwordRef.current?.setSelectionRange(0, 999);
     window.navigator.clipboard.writeText(password);
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 3500); //Reset after 3.5 seconds
   }, [password]);
 
   useEffect(() => {
@@ -52,9 +56,9 @@ const PasswordGenerator = () => {
           />
           <button
             onClick={copyPasswordToClipboard}
-            className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0"
+            className={`outline-none text-white px-3 py-0.5 shrink-0 ${ isCopied ? 'bg-green-500' : 'bg-blue-700'} text-white`}
           >
-            Copy Me!
+            {isCopied ? "Copied 👍" : "Copy 😁"}
           </button>
         </div>
         <div className="flex text-sm gap-x-2">
