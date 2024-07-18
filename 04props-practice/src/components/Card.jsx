@@ -30,7 +30,7 @@ const Card = ({btnText = "Click Me"}) => {
     <p className="mt-3 text-sm text-gray-600">
         Insert some details here!
     </p>
-    <div className="mt-4">
+    <div className="mt-4 mb-10">
       <span className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
         #Macbook
       </span>
