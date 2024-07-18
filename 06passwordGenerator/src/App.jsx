@@ -1,19 +1,7 @@
-import { useState } from 'react'
-import './App.css'
+import PasswordGenerator from "./components/PasswordGenerator";
 
 function App() {
-  
-  const [length, setLength] = useState(8);
-  const [numberAllowed, setNumberAllowed] = useState(false);
-  const [characterAllowed, setCharacterAllowed] = useState(false);
-  const [password, setPassword] = useState("");
-
-
-  return (
-    <>
-        <h1 className="text-4xl text-center text-white">Password Generator</h1>    
-    </>
-  )
+  return <PasswordGenerator />;
 }
 
-export default App
+export default App;
