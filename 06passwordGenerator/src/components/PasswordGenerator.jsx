@@ -6,7 +6,6 @@ const PasswordGenerator = () => {
   const [characterAllowed, setCharacterAllowed] = useState(false);
   const [password, setPassword] = useState("");
   const [isCopied, setIsCopied] = useState(false);
-  
 
   //useRef Hook
   const passwordRef = useRef(null);
@@ -56,7 +55,9 @@ const PasswordGenerator = () => {
           />
           <button
             onClick={copyPasswordToClipboard}
-            className={`outline-none text-white px-3 py-0.5 shrink-0 ${ isCopied ? 'bg-green-500' : 'bg-blue-700'} text-white`}
+            className={`outline-none text-white px-3 py-0.5 shrink-0 ${
+              isCopied ? "bg-green-500" : "bg-blue-700"
+            } text-white`}
           >
             {isCopied ? "Copied 👍" : "Copy 😁"}
           </button>
