@@ -9,7 +9,7 @@ import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import Error404 from './Pages/Error404'
 import User from './components/User/User'
-import Github from './components/Github/Github'
+import Github, { githubInfoLoader } from './components/Github/Github'
 
 
 // const router = createBrowserRouter([
@@ -44,7 +44,7 @@ const router = createBrowserRouter(
       <Route path='about' element={<About/>}/>
       <Route path='contact' element={<Contact/>}/>
       <Route path='user/:userId' element={<User/>}/>
-      <Route path='github' element={<Github/>}/>
+      <Route loader= {githubInfoLoader} path='github' element={<Github/>}/>
       <Route path='*' element={<Error404/>}/> 
     </Route>
   )
