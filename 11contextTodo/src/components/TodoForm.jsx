@@ -6,7 +6,7 @@ function TodoForm() {
   const [todo, setTodo] = useState("");
   const { addTodo } = useTodo();
 
-  const add = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!todo) return;
     addTodo({
@@ -17,7 +17,7 @@ function TodoForm() {
   }
 
   return (
-      <form  onSubmit={add} className="flex">
+      <form  onSubmit={handleSubmit} className="flex">
           <input
               type="text"
               placeholder="Write Todo..."
